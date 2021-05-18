@@ -8,9 +8,10 @@
 }
 
 .videos-history {
-    width: 25em;
+    width: 23em;
     height: 15em;
     padding: 1em;
+    margin-left: -10em;
 
 }
 
@@ -20,6 +21,10 @@
     text-transform: uppercase;
     text-align: center;
     font-size: 2em;
+    z-index: -1;
+    left: 0;
+    right: 0;
+
 
 }
 
@@ -32,7 +37,7 @@
 
 .g {
     grid-area: g;
-    background-color: rgba(189, 188, 188, 0.068);
+    /* background-color: rgba(189, 188, 188, 0.068); */
 
 }
 
@@ -40,6 +45,7 @@
     grid-area: d;
     height: 100vh;
     display: flex;
+    flex-wrap: wrap;
     /* background-color: rgba(189, 188, 188, 0.158); */
 
 }

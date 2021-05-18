@@ -185,6 +185,7 @@ input {
 
     .video {
         width: 100vw;
+        height: 17em;
         margin-top: 5em;
     }
     .channel-details-hidden{
