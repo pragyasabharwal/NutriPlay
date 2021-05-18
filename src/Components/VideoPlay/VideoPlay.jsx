@@ -18,12 +18,17 @@ export function VideoPlay() {
         <div>
           <div>
             <YouTube
-             onPlay={()=>dispatch({type: `ADD_TO_HISTORY`, payload: item})}
+              onPlay={() => dispatch({ type: `ADD_TO_HISTORY`, payload: item })}
               videoId={item.id}
-              opts={{ width: "86%", height: 600 }}
               className={state.displayNav ? "video-nav-hidden" : "video"}
             ></YouTube>
-            <div className={state.displayModal ? 'channel-details-1' : 'channel-details-hidden'}>
+            <div
+              className={
+                state.displayModal
+                  ? "channel-details-1"
+                  : "channel-details-hidden"
+              }
+            >
               <span className="col">
                 <h2 className="title video-name">{item.name}</h2>
                 <span className="title gray last-row inc">
@@ -49,46 +54,31 @@ export function VideoPlay() {
                     style={state.saved.includes(item) ? { color: "red" } : null}
                   ></i>
                 </span>
-                <span className="playlist" onClick={()=>dispatch({type: 'SHOW_MODAL'})}>
-                <svg viewBox="0 0 24 24" style={{pointerEvents : 'none', width : '1.5em', height : '1.5em'}} ><g class="style-scope yt-icon"><path d="M14 10H2v2h12v-2zm0-4H2v2h12V6zm4 8v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM2 16h8v-2H2v2z" class="style-scope yt-icon"></path></g></svg>
+                <span
+                  className="playlist"
+                  onClick={() => dispatch({ type: "SHOW_MODAL" })}
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    style={{
+                      pointerEvents: "none",
+                      width: "1.5em",
+                      height: "1.5em",
+                    }}
+                  >
+                    <g class="style-scope yt-icon">
+                      <path
+                        d="M14 10H2v2h12v-2zm0-4H2v2h12V6zm4 8v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM2 16h8v-2H2v2z"
+                        class="style-scope yt-icon"
+                      ></path>
+                    </g>
+                  </svg>
                 </span>
               </span>
               {state.displayModal && <PlaylistModal item={item} />}
             </div>
           </div>
           <div className="relative">
-            <div className="row">
-              <div className="notes">
-                <span>Notes</span>
-                <input
-                  value={input}
-                  placeholder={`Add a note...`}
-                  onChange={(e) => setInput(e.target.value)}
-                ></input>
-                <div className="buttons">
-                  <button
-                    className="button-outline-none"
-                    onClick={() => setInput("")}
-                  >
-                    CANCEL
-                  </button>
-                  <button
-                    className="button-primary margin-1"
-                    onClick={() => {
-                      setNotes((prev) => prev.concat(input));
-                      setInput("");
-                    }}
-                  >
-                    ADD
-                  </button>
-                </div>
-                <div className="item-list">
-                  {notes.map((item) => (
-                    <span>{item}</span>
-                  ))}
-                </div>
-              </div>
-            </div>
             <div className="v">
               {data.map((items) => {
                 if (items.id !== item.id) {

@@ -12,6 +12,7 @@ export function Nav() {
         onClick={() => dispatch({ type: "TOGGLE_NAV" })}
       ></i>
       <input autoFocus className="search" placeholder={"Search"} />
+      <div className="nav-toggle-display">
       <div className={state.displayNav ? "nav-disable" : "nav"}>
         <i
           class="fas fa-times above"
@@ -77,6 +78,7 @@ export function Nav() {
               </>
             );
           })}
+      </div>
       </div>
     </nav>
   );

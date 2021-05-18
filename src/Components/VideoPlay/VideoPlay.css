@@ -6,16 +6,16 @@ h1 {
     display: block;
     margin: 0em auto;
     margin-top: 5em;
-    margin-left: 12.5em;
-
+    /* margin-left: 12.5em; */
+    width: 100vw;
+    height: 38em;
 }
 
 .video-nav-hidden {
     margin-top: 6.8em;
-    margin-left: 5em;
-
+    width: 100vw;
+    height: 38em;
 }
-
 
 .like {
     justify-self: flex-end;
@@ -68,7 +68,6 @@ h1 {
 
 
 }
-
 
 .details-1 {
     align-self: flex-start;
@@ -175,3 +174,30 @@ input {
     padding: 1em;
     align-content: center;
 }
+
+@media only screen and (max-width: 600px) {
+    .video-nav-hidden {
+        width: 100vw;
+        height: 17em;
+        margin-top: 6.8em;
+
+    }
+
+    .video {
+        width: 100vw;
+        margin-top: 5em;
+    }
+    .channel-details-hidden{
+        margin-left: 0;
+        font-size: small;
+    }
+    .like{
+        font-size: large;
+    }
+}
+@media only screen and (min-width: 600px) {
+    .channel-details-hidden{
+        margin-left: 0;
+    }
+}
+

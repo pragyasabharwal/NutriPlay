@@ -38,10 +38,10 @@ nav {
     position: fixed;
     left: 0;
     border-right: 1px solid var(--gray-fade);
-    top: 1em;
+    padding-top: 1em;
     background-color: white;
     transition: 350ms;
-    height: 100vh;
+    height: 100%;
 
 
 }
@@ -113,3 +113,8 @@ nav img {
     margin-top: 0.62em;
     font-size: 1.8em;
 }
+/* @media only screen and (max-width: 600px) {
+    .nav-toggle-display {
+      visibility: hidden;
+    }
+  } */
