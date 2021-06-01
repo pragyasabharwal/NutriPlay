@@ -6,15 +6,15 @@ h1 {
     display: block;
     margin: 0em auto;
     margin-top: 5em;
-    /* margin-left: 12.5em; */
     width: 100vw;
     height: 38em;
+    max-width: 100em;
 }
 
 .video-nav-hidden {
-    margin-top: 6.8em;
     width: 100vw;
     height: 38em;
+    max-width: 100em;
 }
 
 .like {
@@ -188,17 +188,19 @@ input {
         height: 17em;
         margin-top: 5em;
     }
-    .channel-details-hidden{
+
+    .channel-details-hidden {
         margin-left: 0;
         font-size: small;
     }
-    .like{
+
+    .like {
         font-size: large;
     }
 }
+
 @media only screen and (min-width: 600px) {
-    .channel-details-hidden{
+    .channel-details-hidden {
         margin-left: 0;
     }
 }
-

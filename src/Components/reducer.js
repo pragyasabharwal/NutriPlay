@@ -1,5 +1,5 @@
 import { v4 as uuid } from "uuid";
-export const Reducer = (state, action) => {
+export const reducer = (state, action) => {
   switch (action.type) {
     case "ADD_TO_WATCH_LATER":
       return state.watchLater.includes(action.payload)
