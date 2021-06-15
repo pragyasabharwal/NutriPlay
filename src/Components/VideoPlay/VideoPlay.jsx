@@ -22,9 +22,7 @@ export function VideoPlay() {
 
   useEffect(() => {
     (async function () {
-      const res = await axios.get(
-        `${REACT_APP_BASE_URL}/videos/${videoId}`
-      );
+      const res = await axios.get(`${REACT_APP_BASE_URL}/videos/${videoId}`);
       console.log(res);
       setData(res.data.video);
     })();
@@ -32,9 +30,7 @@ export function VideoPlay() {
 
   useEffect(() => {
     (async function () {
-      const res = await axios.get(
-        `${REACT_APP_BASE_URL}/videos`
-      );
+      const res = await axios.get(`${REACT_APP_BASE_URL}/videos`);
       console.log(res);
       setAllData(res.data.videos);
     })();
@@ -45,6 +41,7 @@ export function VideoPlay() {
       if (item._id === videoId) {
         return (
           <div>
+            {modal && <div className="modal-fade"></div>}{" "}
             <div>
               {modal && <LoginModal />}
               <YouTube
@@ -72,9 +69,9 @@ export function VideoPlay() {
                     <i
                       className="fas fa-thumbs-up like padding-1"
                       onClick={() =>
-                        login ?
-                        dispatch({ type: "TOGGLE_LIKE", payload: item })
-                        : setModal(true)
+                        login
+                          ? dispatch({ type: "TOGGLE_LIKE", payload: item })
+                          : setModal(true)
                       }
                       style={
                         state.liked.includes(item) ? { color: "red" } : null
@@ -97,9 +94,8 @@ export function VideoPlay() {
                   <span
                     className="playlist"
                     onClick={() =>
-                      login ?
-                       dispatch({ type: "SHOW_MODAL" })
-                       : setModal(true)}
+                      login ? dispatch({ type: "SHOW_MODAL" }) : setModal(true)
+                    }
                   >
                     <svg
                       viewBox="0 0 24 24"

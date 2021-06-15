@@ -13,13 +13,9 @@ export function Home() {
   const { login } = useAuth();
   const { setModal, modal } = useDataContext();
 
-  console.log(REACT_APP_BASE_URL)
-
   useEffect(() => {
     (async function () {
-      const res = await axios.get(
-        `${REACT_APP_BASE_URL}/videos`
-      );
+      const res = await axios.get(`${REACT_APP_BASE_URL}/videos`);
       console.log(res);
       setData(res.data.videos);
     })();
@@ -28,8 +24,8 @@ export function Home() {
   const { dispatch, state } = useDataContext();
 
   return (
-    <>
-      {modal && <LoginModal />}
+    <div>
+      {modal && <div className="modal-fade"></div>} {modal && <LoginModal />}
       <div
         className="video-listing-1"
         style={
@@ -98,7 +94,6 @@ export function Home() {
           </div>
         )}
       </div>
-      <footer></footer>
-    </>
+    </div>
   );
 }

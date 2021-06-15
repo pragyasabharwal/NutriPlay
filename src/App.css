@@ -3,6 +3,7 @@
 @import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
 .App {
     text-align: center;
+    
 }
 .videos-list {
     display: flex;

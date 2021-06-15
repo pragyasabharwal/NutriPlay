@@ -17,6 +17,16 @@ h1 {
     max-width: 100em;
 }
 
+.modal-fade{
+    position: absolute;
+    width: 100vw;
+    height: 1000vh;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.384);
+    z-index: 90;
+}
+
 .like {
     justify-self: flex-end;
     font-size: xx-large;
