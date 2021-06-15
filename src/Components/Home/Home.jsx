@@ -1,6 +1,6 @@
 import "./Home.css";
 import { data } from "../Data";
-import { useDataContext } from "../../Context/context";
+import { useDataContext } from "../context/DataContext";
 import { Link } from "react-router-dom";
 
 export function Home() {

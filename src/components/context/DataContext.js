@@ -1,5 +1,5 @@
 import { createContext, useContext } from "react";
-import { reducer } from "../Components/reducer";
+import { reducer } from "../reducer";
 import { useReducer } from "react";
 
 const DataContext = createContext();
@@ -17,8 +17,6 @@ const initialState = {
   show: false
 
 }
-
-
 
 export function DataProvider({ children }) {
   const [state, dispatch] = useReducer(reducer, initialState);

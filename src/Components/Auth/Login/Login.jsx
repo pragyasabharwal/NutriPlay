@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate, useLocation, Link } from "react-router-dom";
-import { useAuth } from "../../Context/AuthProvider";
+import { useAuth } from "../../context/AuthProvider";
 import "./Login.css";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 import { faEyeSlash } from "@fortawesome/free-solid-svg-icons";
@@ -55,7 +55,7 @@ export const Login = () => {
             Login
           </button>
         </form>
-        <span>
+        <span  className="footer-text">
           Don't have an account?{" "}
           <Link to="/signup" className="underline">
             Sign Up

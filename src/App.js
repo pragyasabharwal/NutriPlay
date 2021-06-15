@@ -1,17 +1,17 @@
 import "./App.css";
-import { LikedVideos } from "./Components/LikedVideos";
-import { Nav } from "./Components/Nav/Nav";
-import { WatchLater } from "./Components/WatchLater/WatchLater";
+import { LikedVideos } from "./components/LikedVideos";
+import { Nav } from "./components/nav/Nav";
+import { WatchLater } from "./components/watchLater/WatchLater";
 import { Route, Routes } from "react-router-dom";
-import { Home } from "./Components/Home/Home";
-import { VideoPlay } from "./Components/VideoPlay/VideoPlay";
-import { SavedVideos } from "./Components/SavedVideos";
-import { History } from "./Components/History/History";
-import { Library } from "./Components/Library/Library";
-import { Playlist } from "./Components/Playlist/Playlist";
-import { Login } from "./Components/Auth/Login/Login"
-import { Signup } from "./Components/Auth/Signup/Signup";
-import { PrivateRoute } from "./Components/Auth/PrivateRoute"
+import { Home } from "./components/home/Home";
+import { VideoPlay } from "./components/videoplay/VideoPlay";
+import { SavedVideos } from "./components/SavedVideos";
+import { History } from "./components/history/History";
+import { Library } from "./components/library/Library";
+import { Playlist } from "./components/playlist/Playlist";
+import { Login } from "./components/auth/login/Login"
+import { Signup } from "./components/auth/signup/Signup";
+import { PrivateRoute } from "./components/auth/PrivateRoute"
 
 function App() {
   return (

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useDataContext } from "../../Context/context";
+import { useDataContext } from "../context/DataContext";
 import "./PlaylistModal.css";
 
 export function PlaylistModal({ item }) {

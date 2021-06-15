@@ -36,8 +36,6 @@ export const Signup = () => {
 
 
   const passCheck = () => {
-    console.log("herr");
-
     if (password.length > 0 && confirmPW.length > 0) {
       password !== confirmPW && setError("Passwords do not match");
     }
@@ -116,7 +114,7 @@ export const Signup = () => {
           Sign Up
         </button>
         </form>
-        <div>
+        <div className="footer-text">
           {" "}
           Already have an account?{" "}
           <Link to="/login" className="underline">
@@ -124,7 +122,6 @@ export const Signup = () => {
           </Link>
           </div>
         </div>
-        <div className="h-96"></div>
       </div>
     </div>
   );

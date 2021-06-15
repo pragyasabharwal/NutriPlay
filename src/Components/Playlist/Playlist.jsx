@@ -1,6 +1,6 @@
 import { useParams } from "react-router";
 import YouTube from "react-youtube";
-import { useDataContext } from "../../Context/context";
+import { useDataContext } from "../context/DataContext";
 
 export const Playlist = () => {
   const { name } = useParams();

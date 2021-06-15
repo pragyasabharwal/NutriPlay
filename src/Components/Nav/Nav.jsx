@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { useDataContext } from "../../Context/context";
-import { useAuth } from "../Context/AuthProvider";
+import { useDataContext } from "../context/DataContext";
+import { useAuth } from "../context/AuthProvider";
 import "./Nav.css";
 
 export function Nav() {

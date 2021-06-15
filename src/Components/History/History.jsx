@@ -1,4 +1,4 @@
-import { useDataContext } from "../../Context/context";
+import { useDataContext } from "../context/DataContext";
 import YouTube from "react-youtube";
 import "./History.css";
 

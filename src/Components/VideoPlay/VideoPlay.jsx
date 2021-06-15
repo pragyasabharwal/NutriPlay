@@ -1,12 +1,12 @@
 import { data } from "../Data";
 import YouTube from "react-youtube";
 import "./VideoPlay.css";
-import { useDataContext } from "../../Context/context";
+import { useDataContext } from "../context/DataContext";
 import { useNavigate, useParams } from "react-router-dom";
 import { useState } from "react";
-import { PlaylistModal } from "../PlaylistModal/PlaylistModal";
-import { useAuth } from "../Context/AuthProvider";
-import { LoginModal } from "../Modal/LoginModal"
+import { PlaylistModal } from "../playlistmodal/PlaylistModal";
+import { useAuth } from "../context/AuthProvider";
+import { LoginModal } from "../modal/LoginModal"
 
 export function VideoPlay() {
   const [input, setInput] = useState("");
