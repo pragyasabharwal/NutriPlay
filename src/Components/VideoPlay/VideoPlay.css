@@ -25,6 +25,10 @@ h1 {
     align-items: center;
 }
 
+.spinner{
+   margin-top: 20em;
+}
+
 .name {
     font-size: larger;
     margin-top: 4em;

@@ -1,4 +1,4 @@
-import { createContext, useContext } from "react";
+import { createContext, useContext, useState } from "react";
 import { reducer } from "../reducer";
 import { useReducer } from "react";
 
@@ -19,11 +19,12 @@ const initialState = {
 }
 
 export function DataProvider({ children }) {
+  const [modal, setModal] = useState(false);
   const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
     <DataContext.Provider
-      value={{ dispatch, state }}
+      value={{ dispatch, state, modal, setModal }}
     >
       {children}
     </DataContext.Provider>
