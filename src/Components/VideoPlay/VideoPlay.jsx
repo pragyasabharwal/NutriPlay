@@ -5,18 +5,23 @@ import { useDataContext } from "../../Context/context";
 import { useNavigate, useParams } from "react-router-dom";
 import { useState } from "react";
 import { PlaylistModal } from "../PlaylistModal/PlaylistModal";
+import { useAuth } from "../Context/AuthProvider";
+import { LoginModal } from "../Modal/LoginModal"
 
 export function VideoPlay() {
   const [input, setInput] = useState("");
   const [notes, setNotes] = useState([]);
+  const [modal, setModal] = useState(false)
   const { dispatch, state } = useDataContext();
   const navigate = useNavigate();
+  const { login } = useAuth()
   let { videoId } = useParams();
   return data.map((item) => {
     if (item.id === videoId) {
       return (
         <div>
           <div>
+            {modal && <LoginModal />}
             <YouTube
               onPlay={() => dispatch({ type: `ADD_TO_HISTORY`, payload: item })}
               videoId={item.id}
@@ -49,7 +54,8 @@ export function VideoPlay() {
                   <i
                     className="fas fa-bookmark save"
                     onClick={() =>
-                      dispatch({ type: "TOGGLE_SAVE", payload: item })
+                      login ? dispatch({ type: "TOGGLE_SAVE", payload: item }) :
+                      setModal(true)
                     }
                     style={state.saved.includes(item) ? { color: "red" } : null}
                   ></i>

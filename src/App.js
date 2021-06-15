@@ -9,6 +9,9 @@ import { SavedVideos } from "./Components/SavedVideos";
 import { History } from "./Components/History/History";
 import { Library } from "./Components/Library/Library";
 import { Playlist } from "./Components/Playlist/Playlist";
+import { Login } from "./Components/Auth/Login/Login"
+import { Signup } from "./Components/Auth/Signup/Signup";
+import { PrivateRoute } from "./Components/Auth/PrivateRoute"
 
 function App() {
   return (
@@ -16,12 +19,14 @@ function App() {
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/watch-later" element={<WatchLater />} />
-        <Route path="/liked" element={<LikedVideos />} />
-        <Route path="/saved" element={<SavedVideos />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <PrivateRoute path="/watch-later" element={<WatchLater />} />
+        <PrivateRoute path="/liked" element={<LikedVideos />} />
+        <PrivateRoute path="/saved" element={<SavedVideos />} />
         <Route path="/videos/:videoId" element={<VideoPlay />} />
-        <Route path="/history" element={<History />} />
-        <Route path="/library" element={<Library />} />
+        <PrivateRoute path="/history" element={<History />} />
+        <PrivateRoute path="/library" element={<Library />} />
         <Route path="/playlists/:name" element = {<Playlist />} />
       </Routes>
     </div>

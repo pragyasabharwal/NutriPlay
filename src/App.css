@@ -18,24 +18,7 @@
   position: relative;
   width: 100%;
 }
-/* .modal{
-  width: 15em;
-  position: absolute;
-  top: 4em;
-  left: 12em; 
-  background-color: white;
-  box-shadow: none;
-  z-index: 1;
-  left: 50%;                   
-  transform: translateX(-50%);
-} */
-/* .modal-header{
-  font-size: 0.8em;
-  padding-top: 0.3em;
-}
-.modal-close{
-  top: 0.5em; */
-/* } */
+
 .liked-list{
   display: flex;
   flex-direction: column;

@@ -17,6 +17,21 @@
 
 }
 
+.login {
+    align-self: center;
+    padding: 0 1em;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.title{
+    align-self: center;
+    font-size: 1.2em;
+    padding-right: 1em;
+    cursor: pointer;
+    font-weight: 500;
+}
+
 ::placeholder {
     font-family: 'Roboto';
     color: var(--gray);
@@ -45,6 +60,7 @@ nav {
 
 
 }
+
 .nav-disable {
     position: fixed;
     left: -100%;
@@ -54,22 +70,26 @@ nav {
     background-color: white;
 
 }
-.nav-disable li{
+
+.nav-disable li {
     list-style: none;
     display: flex;
     padding-top: 1.5em;
     padding-bottom: 0.5em;
     padding-left: 1em;
     padding-right: 2em;
-} 
+}
+
 .nav-disable i {
     padding: 0em 1em;
     font-size: 1.3em;
 }
+
 .nav-disable svg {
     padding: 0em 1em;
     font-size: 1.3em;
 }
+
 .nav li {
     list-style: none;
     display: flex;
@@ -83,6 +103,7 @@ nav {
     padding: 0em 1em;
     font-size: 1.3em;
 }
+
 .nav svg {
     padding: 0em 1em;
     width: 1.5em;
@@ -113,6 +134,7 @@ nav img {
     margin-top: 0.62em;
     font-size: 1.8em;
 }
+
 /* @media only screen and (max-width: 600px) {
     .nav-toggle-display {
       visibility: hidden;
